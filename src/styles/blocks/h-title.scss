@@ -1,0 +1,39 @@
+.h-title {
+    --v-h-title-padding-y: 2.3333rem;
+    --v-h-title-gap: 1.6667rem;
+    --v-h-title-margin-bottom: 2rem;
+    padding: var(--v-h-title-padding-y) 0;
+    &--border-top {
+        border-top: solid 1px var(--v-gray-800);
+    }
+    // display: flex;
+    // flex-direction: column;
+    // gap: var(--v-h-title-gap);
+    // padding: var(--v-h-title-padding-y) 0;
+    // &__row {
+    // }
+    &__row {
+        --v-gutter-x: 0;
+    }
+
+    &__quantity {
+        // display: flex;
+        font-size: 0.8667rem;
+    }
+
+    &__titles {
+        display: flex;
+        gap: 2rem;
+        color: var(--v-secondary);
+
+        & > * {
+            margin: 0;
+            cursor: pointer;
+        }
+        .h-title__item {
+            &--active {
+                color: var(--v-white);
+            }
+        }
+    }
+}

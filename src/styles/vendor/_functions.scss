@@ -1,0 +1,17 @@
+@use "sass:string";
+@use "sass:math";
+
+@function random-char() {
+	$chars: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	$length: string.length($chars);
+	$index: math.random($length) - 1;
+	@return string.slice($chars, $index, $index);
+}
+
+@function random-string($length) {
+	$result: "";
+	@for $i from 1 through $length {
+		$result: #{$result}#{random-char()};
+	}
+	@return $result;
+}

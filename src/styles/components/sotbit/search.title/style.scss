@@ -1,0 +1,118 @@
+@use "../../../vendor/libs" as *;
+
+.smartsearch-title {
+	// .smartsearch-title__wrap
+	&__wrap {
+	}
+	// .smartsearch-title__input-conteiner
+	&__input-conteiner {
+		--v-search-input-padding-y: 0.8rem;
+		--v-search-input-padding-x: 1rem;
+
+		position: relative;
+		input {
+			width: 100%;
+			background-color: var(--v-black);
+			border: none;
+			border-radius: var(--v-border-radius-sm);
+			padding-top: var(--v-search-input-padding-y);
+			padding-bottom: var(--v-search-input-padding-y);
+			padding-left: var(--v-search-input-padding-x);
+			padding-right: var(--v-search-input-padding-x);
+			color: var(--v-gray-600);
+			font-size: 0.8667rem;
+			font-weight: 400;
+		}
+	}
+	// .smartsearch-title__req_history
+	&__req_history {
+	}
+	// .smartsearch-title__result
+	&__result {
+	}
+	// .smartsearch-title__req_history_content
+	&__req_history_content {
+	}
+	// .smartsearch-title__req_history_title
+	&__req_history_title {
+	}
+	// .smartsearch-title__req_history_list
+	&__req_history_list {
+	}
+	// .smartsearch-title__result-item
+	&__result-item {
+	}
+	// .smartsearch-title__current_searchimg_wrap
+	&__current_searchimg_wrap {
+	}
+	// .smartsearch-title__current_searchimg
+	&__current_searchimg {
+	}
+}
+.icon-wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-right: 0.5rem;
+	> * {
+		color: var(--v-gray-600);
+	}
+	button {
+		border: none;
+		background: none;
+	}
+	#smartsearch-title-clear {
+		text-align: center;
+		font-size: 0;
+		cursor: pointer;
+		width: 0;
+		visibility: hidden;
+		transition: 0.3s;
+		opacity: 0;
+		&.show {
+			font-size: 11px;
+			width: 20px;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.search-title {
+	// .search-title__icon
+	&__icon {
+	}
+	// .search-title__searchimg_form_wrap
+	&__searchimg_form_wrap {
+	}
+	// .search-title__searchimg_form_container
+	&__searchimg_form_container {
+	}
+}
+.show {
+}
+.item {
+}
+.icon {
+}
+.icon-history {
+}
+.item-name {
+}
+.delete-item {
+}
+.filename {
+}
+.title {
+}
+.error {
+}
+.image_href {
+}
+.input-text {
+}
+.btn {
+}

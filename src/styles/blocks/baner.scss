@@ -1,0 +1,51 @@
+@import "../vendor/libs";
+
+.baner {
+    --v-baner-title-padding-x: 0.6667rem;
+    --v-baner-padding: 2rem;
+    --v-baner-wrapper-gap: 1.3333rem;
+
+    padding: var(--v-baner-padding);
+
+    background: center center/cover no-repeat;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: var(--v-baner-wrapper-gap);
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        min-width: 190px;
+        // flex-grow: 1;
+    }
+
+    &__title {
+        flex-basis: 275px;
+        flex-grow: 1;
+        // font-size: 1.1333rem;
+        border-left: none;
+        padding: 2rem;
+        line-height: 110%;
+        @include xl-block() {
+            padding-top: var(--v-baner-title-padding-x);
+            padding-bottom: var(--v-baner-title-padding-x);
+
+            flex-basis: 370px;
+        }
+        @include sm-block() {
+            padding-left: 2rem;
+            border-left: 1px solid #4d4d4d;
+        }
+    }
+
+    &__text {
+        flex-basis: 470px;
+        flex-grow: 1;
+        font-size: 0.8667rem;
+        line-height: 130%;
+        color: var(--v-secondary);
+        padding: 0;
+    }
+}

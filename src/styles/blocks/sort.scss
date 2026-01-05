@@ -1,0 +1,77 @@
+@use "../vendor/libs" as *;
+
+.sort {
+	--v-sort-padding-y: 0.6667rem;
+	--v-sort-padding-x: 1.3333rem;
+	padding-left: var(--v-sort-padding-x);
+	padding-right: var(--v-sort-padding-x);
+	padding-top: var(--v-sort-padding-y);
+	padding-bottom: var(--v-sort-padding-y);
+	border-radius: var(--v-border-radius-lg);
+	background-color: var(--v-black);
+	// .sort__found
+	&__found {
+	}
+	// .sort__title
+	&__title {
+		color: var(--v-gray-600);
+	}
+	// .sort__sorting
+	&__sorting {
+	}
+	// .sort__count
+	&__count {
+	}
+	// .sort__view
+	&__view {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	// .sort__btn-view
+	&__btn-view {
+		--v-sort-btn-view-size-sq: 24px;
+		width: var(--v-sort-btn-view-size-sq);
+		height: var(--v-sort-btn-view-size-sq);
+		font-size: var(--v-sort-btn-view-size-sq);
+		color: var(--v-sort-btn-view-color, var(--v-gray-600));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// .sort__btn-view--selected
+		&--selected {
+			--v-sort-btn-view-color: var(--v-warning);
+		}
+	}
+}
+
+.s-count {
+	// .s-count__list
+	&__list {
+		--v-s-count-link-size-sq: 40px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+	}
+	// .s-count__item
+	&__item {
+		padding: 0;
+	}
+	// .s-count__link
+	&__link {
+		width: var(--v-s-count-link-size-sq);
+		height: var(--v-s-count-link-size-sq);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid var(--v-s-count-link-border-color, transparent);
+		color: var(--v-s-count-link-color, var(--v-gray-600));
+		border-radius: var(--v-border-radius-sm);
+		// .s-count__link--selected
+		&--selected {
+			--v-s-count-link-color: var(--v-warning);
+			--v-s-count-link-border-color: currentColor;
+		}
+	}
+}

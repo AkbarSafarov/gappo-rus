@@ -1,0 +1,24 @@
+@use "../../../vendor/libs" as *;
+
+.breadcrumb {
+	--v-breadcrumb-gap: 0.6667rem;
+	display: flex;
+	gap: var(--v-breadcrumb-gap);
+	color: var(--v-secondary);
+	font-size: 0.7333rem;
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: var(--v-breadcrumb-gap);
+		padding: 0;
+	}
+	&__icon {
+		color: var(--v-yellow);
+	}
+	&__link {
+		color: var(--v-secondary);
+	}
+	&__link {
+		color: var(--v-white);
+	}
+}

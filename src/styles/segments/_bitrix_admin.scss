@@ -1,0 +1,17 @@
+#bx-admin-prefix {
+	input,
+	textarea,
+	select {
+		-webkit-appearance: auto;
+		appearance: auto;
+		width: inherit;
+		resize: block;
+		min-height: auto;
+	}
+}
+
+#bx-panel {
+	a {
+		transition: none !important;
+	}
+}

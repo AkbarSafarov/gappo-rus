@@ -1,0 +1,45 @@
+@import "../vendor/libs";
+
+.sold-products {
+    --v-sold-product-padding: 2rem;
+    --v-sold-products-content: 1.3333rem;
+    --v-sold-products-info-block: 1.3333rem;
+
+    &__row {
+        --v-gutter-x: 20px;
+    }
+
+    &__img {
+        overflow: hidden;
+        height: 100%;
+
+        & img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        @include lg-block() {
+            padding: var(--v-sold-product-padding) 6.6667rem var(--v-sold-product-padding) var(--v-sold-product-padding);
+        }
+        padding: var(--v-sold-product-padding);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: var(--v-sold-products-content);
+        height: 100%;
+        background-color: var(--v-black);
+    }
+
+    &__info-block {
+        display: flex;
+        flex-direction: column;
+        gap: var(--v-sold-products-info-block);
+    }
+
+    &__dop-text {
+        line-height: 100%;
+    }
+}

@@ -1,0 +1,44 @@
+.h-clients {
+    --v-h-client-title-padding-x: 2.3333rem;
+    &__title {
+        padding: var(--v-h-client-title-padding-x) 0;
+    }
+
+    // &__item {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     aspect-ratio: 2;
+    //     flex-basis: 270px;
+    //     background-color: var(--v-dark);
+    //     border-radius: 5px; // Обыграть через переменные
+    // }
+}
+
+.clients-slider {
+    --v-clients-slider-border-radius: 5px;
+
+    position: relative;
+
+    &__content {
+        overflow: hidden;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140px;
+        // aspect-ratio: 2;
+        // flex-basis: 270px;
+        background-color: var(--v-dark);
+        border-radius: var(--v-clients-slider-border-radius);
+    }
+    .swiper-button-disabled {
+        background-color: var(--v-gray-600);
+
+        &:hover {
+            background-color: var(--v-gray-600);
+        }
+    }
+}

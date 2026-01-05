@@ -1,0 +1,129 @@
+.horizontal-card {
+    --v-horizontal-card-content: 1.3333rem;
+    --v-horizontal-card-action-gap: 1rem;
+    --v-horizontal-card-buy-gap: 1rem;
+
+    &__container {
+        display: flex;
+        background-color: var(--v-black);
+        overflow: hidden;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: var(--v-horizontal-card-content);
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__img {
+        position: relative;
+        max-width: 170px;
+        width: 100%;
+        aspect-ratio: 1;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    &__title {
+        max-width: 370px;
+        line-height: 1;
+    }
+
+    &__prices {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__price {
+        text-align: end;
+        font-size: 2rem;
+        line-height: 100%;
+
+        &--inactive {
+            font-size: 0.8667rem;
+            color: var(--v-secondary);
+            text-decoration: line-through;
+        }
+    }
+
+    &__action {
+        display: flex;
+        gap: var(--v-horizontal-card-action-gap);
+        font-size: 1.3333rem;
+        // padding-bottom: 0.3333rem;
+    }
+
+    &__btn {
+        background: none;
+        border: none;
+        padding: 0;
+        color: var(--v-white);
+        cursor: pointer;
+        transition: all 0.1s ease;
+
+        &:hover {
+            color: var(--v-danger);
+        }
+    }
+
+    &__icon {
+        &:hover {
+            color: var(--v-danger);
+            cursor: pointer;
+        }
+    }
+
+    &__buy {
+        display: flex;
+        align-items: end;
+        gap: var(--v-horizontal-card-buy-gap);
+    }
+}
+
+.quantity {
+    display: flex;
+    gap: 5px;
+
+    &__btn {
+        background: none;
+        border: none;
+        color: var(--v-white);
+        font-size: 1.3333rem;
+
+        &:hover {
+            color: var(--v-danger);
+        }
+    }
+
+    &__input {
+        --v-border-width: 1px;
+        --v-border-color: var(--v-secondary);
+        --focus-ring-width: 0;
+        width: 60px;
+        height: 40px;
+        text-align: center;
+        padding: 0;
+        color: var(--v-secondary);
+
+        &:focus {
+            border: 1px solid var(--v-white);
+            box-shadow: none;
+        }
+    }
+}

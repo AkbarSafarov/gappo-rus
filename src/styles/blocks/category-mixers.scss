@@ -1,0 +1,50 @@
+.category-mixers {
+    --category-mixers-gap: 1px;
+
+    --v-category-mixers-item-padding-x: 1rem;
+    --v-category-mixers-item-padding-y: 1.3333rem;
+    --v-category-mixers-item-gap: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--category-mixers-gap);
+
+    // &__row {
+    //     --v-gutter-x: 0.0667rem;
+    //     --v-gutter-y: 0.0667rem;
+    // }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: var(--v-category-mixers-item-gap);
+
+        // max-width: 129px;
+        flex-basis: 129px;
+        /* align-items: center; */
+        text-align: center;
+        padding: var(--v-category-mixers-item-padding-y) var(--v-category-mixers-item-padding-x) 1.2rem
+            var(--v-category-mixers-item-padding-x);
+        background: var(--v-black);
+        aspect-ratio: 1 / 1.085;
+
+        font-size: 0.7333rem;
+        transition: 0.1s;
+        cursor: pointer;
+        text-decoration: none;
+        line-height: 1;
+
+        &:hover {
+            color: var(--v-yellow);
+            font-weight: 600;
+            // font-size: 0.8667rem;
+        }
+    }
+
+    &__img {
+        & * {
+            max-width: 60px;
+        }
+    }
+}

@@ -1,0 +1,222 @@
+@use "../vendor/libs" as *;
+
+[data-role="video"] {
+	--v-data-video-indent: 10px;
+	--v-data-video-width: 140px;
+	position: fixed;
+	transition: all 0.3s ease;
+	z-index: 10000;
+	overflow: hidden;
+	transform-origin: bottom right;
+	will-change: transform;
+	cursor: pointer;
+	width: var(--v-data-video-width, 150px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	border-radius: 0.5rem;
+	@include md(--v-data-video-indent, 20px);
+
+	padding-bottom: 56.25%; // 16:9 соотношение
+	height: 0;
+	@supports (aspect-ratio: 16/9) {
+		padding-bottom: 0;
+		height: auto;
+		aspect-ratio: 16/9;
+	}
+
+	&[data-position="top-left"] {
+		right: auto;
+		bottom: auto;
+		top: var(--v-data-video-indent, 10px);
+		left: var(--v-data-video-indent, 10px);
+	}
+
+	&[data-position="top-right"] {
+		right: var(--v-data-video-indent, 10px);
+		top: var(--v-data-video-indent, 10px);
+		bottom: auto;
+	}
+
+	&[data-position="bottom-right"] {
+		right: var(--v-data-video-indent, 10px);
+		bottom: var(--v-data-video-indent, 10px);
+	}
+
+	&[data-position="bottom-left"] {
+		right: auto;
+		bottom: var(--v-data-video-indent, 10px);
+		left: var(--v-data-video-indent, 10px);
+	}
+	video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		background: #000;
+		transition: all 0.3s ease;
+		&:-webkit-full-screen {
+			width: 100%;
+			height: 100%;
+		}
+		// &::-webkit-media-controls-enclosure {
+		// 	display: none !important;
+		// }
+		// &::-webkit-media-controls-panel {
+		// 	display: none !important;
+		// 	-webkit-appearance: none;
+		// 	opacity: 0;
+		// 	visibility: hidden;
+		// }
+		// &::-webkit-media-controls-play-button {
+		// 	display: none !important;
+		// 	-webkit-appearance: none;
+		// 	opacity: 0;
+		// 	visibility: hidden;
+		// }
+		// &::-webkit-media-controls-start-playback-button {
+		// 	display: none !important;
+		// 	-webkit-appearance: none;
+		// 	opacity: 0;
+		// 	visibility: hidden;
+		// }
+	}
+
+	button {
+		width: var(--v-data-video-button-size-sq, 24px);
+		height: var(--v-data-video-button-size-sq, 24px);
+		color: white;
+		cursor: pointer;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 4;
+		&:active {
+			color: #dadada;
+		}
+	}
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: currentColor;
+	}
+
+	[data-video="container"] {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	[data-video-loader] {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 30px;
+		height: 30px;
+		border: 3px solid rgba(255, 255, 255, 0.3);
+		border-radius: 50%;
+		border-top-color: #fff;
+		animation: vm-spin 1s linear infinite;
+	}
+	[data-close] {
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 10px;
+	}
+
+	[data-fullscreen] {
+		display: none;
+	}
+
+	@include md-block() {
+		[data-fullscreen] {
+			display: block;
+		}
+	}
+}
+
+.vm-popup-video {
+	right: 20px;
+	bottom: 20px;
+	--v-data-video-width: 120px;
+	@include md(--v-data-video-width, 140px);
+
+	.vm-control:not([data-close]) {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	&:hover {
+		&:not(.expanded) {
+			--v-data-video-width: 130px;
+			@include md(--v-data-video-width, 150px);
+		}
+		.vm-control-top {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&.expanded {
+		--v-data-video-width: 220px;
+		@include md(--v-data-video-width, 270px);
+		&:hover .vm-control-center {
+			opacity: 1;
+		}
+		.vm-control {
+			visibility: visible;
+			opacity: 1;
+			&-top {
+				background: rgba(0, 0, 0, 0.3);
+			}
+			&-center {
+				opacity: 0;
+				transform: translate(-50%, -50%) scale(1);
+			}
+		}
+	}
+}
+.vm-control {
+	font-size: 16px;
+	opacity: 0.8;
+	// padding: 0.45rem;
+	background: none;
+	&-group {
+		display: flex;
+		gap: 0.5rem;
+	}
+	&-top {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: space-between;
+		padding: 0.25rem;
+		transition:
+			transform 0.3s ease,
+			opacity 0.3s ease-in;
+		z-index: 2;
+		visibility: hidden;
+		opacity: 0;
+	}
+	&-center {
+		--v-data-video-button-size-sq: 40px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(0);
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 50%;
+		font-size: 20px;
+		opacity: 0;
+		padding: 1rem;
+	}
+}
+
+@keyframes vm-spin {
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}

@@ -1,0 +1,43 @@
+@import "../vendor/libs";
+
+.h-plus {
+    --v-h-plus-padding: 1.3333rem;
+    --v-h-plus-gap: 2rem;
+    --v-h-plus-item: 1rem;
+    --v-h-plus-title-gap: 1.3333rem;
+
+    @include md-block() {
+        flex-direction: column;
+    }
+
+    display: flex;
+    gap: var(--v-h-plus-gap);
+    flex-wrap: wrap;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: var(--v-h-plus-padding);
+        gap: var(--v-h-plus-item);
+        flex-grow: 1;
+        background-color: var(--v-black);
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--v-h-plus-title-gap);
+        line-height: 1.2;
+    }
+
+    &__text {
+        color: var(--v-secondary);
+        line-height: 1.3;
+    }
+
+    &__icon {
+        font-size: 1.3333rem;
+        // min-width: 20px;
+        max-width: 20px;
+    }
+}

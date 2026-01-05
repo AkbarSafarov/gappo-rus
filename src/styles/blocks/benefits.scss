@@ -1,0 +1,32 @@
+@use "../vendor/libs" as *;
+
+.benefits {
+	--v-h-positive-item-padding-x: 2rem;
+	--v-h-positive-item-padding-top: 2.6667rem;
+	--v-h-positive-item-padding-bottom: 2rem;
+
+	--v-h-positive-item-title-margin-bottom: 1.3333rem;
+
+	&__item {
+		background: var(--v-dark);
+		padding: var(--v-h-positive-item-padding-top) var(--v-h-positive-item-padding-x)
+			var(--v-h-positive-item-padding-bottom) var(--v-h-positive-item-padding-x);
+		text-align: center;
+		height: 100%;
+
+		&-icon {
+			font-size: 4rem;
+			line-height: 0;
+
+			& img {
+				height: 60px;
+				object-fit: contain;
+			}
+		}
+
+		/* h-positive__item-title */
+		&-title {
+			margin-bottom: var(--v-h-positive-item-title-margin-bottom);
+		}
+	}
+}

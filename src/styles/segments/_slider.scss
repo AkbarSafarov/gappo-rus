@@ -1,0 +1,66 @@
+@use "../vendor/libs" as *;
+
+.--slider {
+	--v-slider-btn-size-sq: 3.3333rem;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.2s ease-in;
+	[data-slider] {
+		overflow: hidden;
+	}
+	.slider {
+		&-btn {
+			transition: 0.2s ease;
+			width: var(--v-slider-btn-size-sq, 3rem);
+			height: var(--v-slider-btn-size-sq, 3rem);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--v-gray-700);
+			color: var(--v-white);
+			border-radius: var(--v-border-radius-pill);
+			font-size: 0.8rem;
+			&:hover {
+				color: var(--v-secondary);
+			}
+			&:active {
+				color: var(--v-primary);
+			}
+			&.disabled {
+				color: var(--v-gray-400);
+				cursor: not-allowed;
+			}
+			&.lock {
+				display: none !important;
+			}
+			&s {
+				position: absolute;
+				top: var(--v-slider-btns-top, 0);
+				bottom: var(--v-slider-btns-bottom, 0);
+				left: calc(-1 * (var(--v-slider-btn-size-sq, 3rem) / 2));
+				right: calc(-1 * (var(--v-slider-btn-size-sq, 3rem) / 2));
+				height: 0;
+				margin: auto;
+				z-index: 10;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+		}
+	}
+	.swiper-slide {
+		height: auto;
+	}
+	.swiper-grid-column > .swiper-wrapper {
+		flex-wrap: wrap;
+		flex-direction: column;
+		.swiper-slide {
+			// height: calc((100% - 30px) / 2) !important;
+		}
+	}
+	.swiper-pagination {
+		&.lock {
+			display: none !important;
+		}
+	}
+}

@@ -1,0 +1,60 @@
+@import "../vendor/libs";
+
+.bonuses {
+    --v-bonuses-container-gap: 2rem;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--v-bonuses-container-gap);
+    }
+}
+
+.bonus {
+    --v-bonus-padding: 1.3333rem;
+    --v-bonus-description-gap: 2rem;
+    --v-bonus-group-gap: 1rem;
+    --v-bonus-group-padding-left: 1.3333rem;
+    --v-bonus-group-padding-y: 1.3333rem;
+    --v-bonus-description-padding-y: 1.3333rem;
+
+    display: flex;
+    background-color: var(--v-black);
+    padding: 0 var(--v-bonus-padding);
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: var(--v-bonus-group-gap);
+        padding: var(--v-bonus-group-padding-y) 0;
+
+        &--border {
+            border-left: 1px solid var(--v-gray-700);
+            padding-left: var(--v-bonus-group-padding-left);
+        }
+    }
+
+    &__title {
+        line-height: 100%;
+    }
+    &__description {
+        // flex-basis: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: var(--v-bonus-description-padding-y) 0;
+        line-height: 130%;
+        gap: var(--v-bonus-description-gap);
+
+        &-title {
+            margin-bottom: 0.3333rem;
+        }
+
+        &-text {
+            color: var(--v-gray-500);
+        }
+    }
+}

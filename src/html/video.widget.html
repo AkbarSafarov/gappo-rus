@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	@@include('blocks/head.html', { "title":"VideoWidget", "description":"Video widget from vladislavm",
+	"keywords":"widget, video, popup" })
+	<link rel="stylesheet" href="/styles/other_prj/video.widget.css">
+	<script src="/js/other_prj/video.widget.js"></script>
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<div class="page">
+		<main class="main" style="height: 5000px;">
+
+			<div class="vm-popup-video" data-role="video" data-position="bottom-left"
+				data-desktop="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+				data-mobile="https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4">
+				<div data-video="container">
+					<video muted loop playsinline></video>
+
+					<div class="vm-control-top">
+						<div class="vm-control-group">
+							<button class="vm-control" title="Переключить звук" aria-label="Переключить звук" data-sound></button>
+						</div>
+						<div class="vm-control-group">
+							<button class="vm-control" title="Свернуть виджет" aria-label="Свернуть виджет" data-minimize></button>
+							<button class="vm-control" title="Полноэкранный режим" aria-label="Полноэкранный режим"
+								data-fullscreen></button>
+							<button class="vm-control" title="Закрыть виджет" aria-label="Закрыть виджет" data-close></button>
+						</div>
+					</div>
+
+					<button class="vm-control-center" title="Воспроизвести/пауза" aria-label="Воспроизвести/пауза"
+						data-play-pause></button>
+				</div>
+			</div>
+
+			<script>
+				// Инициализация виджета
+				document.addEventListener('DOMContentLoaded', () => {
+					// Проверяем cookie перед инициализацией
+					if (VideoWidget.prototype.getCookie('vm-video-closed') === 'true') {
+						const widget = document.querySelector('[data-role="video"]');
+						if (widget) widget.remove();
+						return;
+					}
+
+					const widgetElement = document.querySelector('[data-role="video"]');
+					if (widgetElement)
+						new VideoWidget(widgetElement);
+				});	
+			</script>
+
+		</main>
+		@@include('blocks/footer.html')
+	</div>
+	@@include('blocks/scripts.html')
+</body>
+
+</html>
