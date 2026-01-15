@@ -142,6 +142,25 @@ document.addEventListener('DOMContentLoaded', function (){
             }
         });
     }
+
+    const orderLabel = document.querySelectorAll('.jsOrderLabelHead');
+
+    if(orderLabel.length) {
+        orderLabel.forEach(head => {
+            head.addEventListener('click', function () {
+                const parent = this.closest('.order__item-label.block');
+                const allBlocks = document.querySelectorAll('.order__item-label.block');
+
+                allBlocks.forEach(block => {
+                    if (block === parent) {
+                        block.classList.toggle('active');
+                    } else {
+                        block.classList.remove('active');
+                    }
+                });
+            });
+        });
+    }
 });
 
 
