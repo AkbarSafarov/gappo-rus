@@ -1,0 +1,115 @@
+:root {
+  --v-products-slider-btn-size: 3.3333rem;
+  --v-products-slider-btn-border-radius: 25px;
+}
+
+.products-slider {
+  position: relative;
+}
+
+.products-slider__content {
+  overflow: hidden;
+}
+
+.products-slider__item {
+  height: auto !important;
+}
+
+.products-slider__btns {
+  position: absolute;
+  top: 37.5%;
+  right: calc(-1 * (var(--v-products-slider-btn-size)) / 4);
+  left: calc(-1 * (var(--v-products-slider-btn-size)) / 4);
+  height: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.products-slider__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  background-color: var(--v-gray-700);
+  width: var(--v-products-slider-btn-size);
+  height: var(--v-products-slider-btn-size);
+  border-radius: var(--v-products-slider-btn-border-radius);
+}
+
+.products-slider__btn:hover {
+  background-color: var(--v-red);
+}
+
+.products-slider .swiper-button-disabled {
+  background-color: var(--v-gray-600);
+}
+
+.markers {
+  --v-marker-position: 10px;
+  --v-marker-gap: 0.6667rem;
+  --v-markers-item-border-radius: 10px;
+  --v-marker-item-padding: 0.6667rem;
+  --v-marker-item-padding-y: 1rem;
+  position: absolute;
+  z-index: 2;
+  top: var(--v-marker-position);
+  right: var(--v-marker-position);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--v-markers-item-border-radius);
+}
+
+.markers--horizontal {
+  left: var(--v-marker-position);
+  right: auto;
+}
+
+.markers__item {
+  padding: var(--v-marker-item-padding);
+  font-size: 0.7333rem;
+  font-weight: 500;
+  border-radius: var(--v-markers-item-border-radius);
+  line-height: 100%;
+}
+
+.markers__item * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 20px;
+}
+
+.markers__icon {
+  font-size: 1.3333rem;
+}
+
+@media screen and (min-width: 1400px) {
+  .products-slider__btns {
+    right: calc(-1 * (var(--v-products-slider-btn-size)) / 2);
+    left: calc(-1 * (var(--v-products-slider-btn-size)) / 2);
+  }
+}
+/*# sourceMappingURL=products-slider.css.map */

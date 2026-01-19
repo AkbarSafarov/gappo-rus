@@ -1,0 +1,5 @@
+const
+    description = document.querySelector('.products-collection__description'),
+    prices = document.querySelector('.products-collection__prices'),
+    content = document.querySelector('.products-collection__content')
+//# sourceMappingURL=products-collection.js.map

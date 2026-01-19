@@ -1,0 +1,30 @@
+.benefits {
+  --v-h-positive-item-padding-x: 2rem;
+  --v-h-positive-item-padding-top: 2.6667rem;
+  --v-h-positive-item-padding-bottom: 2rem;
+  --v-h-positive-item-title-margin-bottom: 1.3333rem;
+}
+
+.benefits__item {
+  background: var(--v-dark);
+  padding: var(--v-h-positive-item-padding-top) var(--v-h-positive-item-padding-x) var(--v-h-positive-item-padding-bottom) var(--v-h-positive-item-padding-x);
+  text-align: center;
+  height: 100%;
+  /* h-positive__item-title */
+}
+
+.benefits__item-icon {
+  font-size: 4rem;
+  line-height: 0;
+}
+
+.benefits__item-icon img {
+  height: 60px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.benefits__item-title {
+  margin-bottom: var(--v-h-positive-item-title-margin-bottom);
+}
+/*# sourceMappingURL=benefits.css.map */

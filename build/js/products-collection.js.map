@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["products-collection.js"],"sourcesContent":["const\r\n    description = document.querySelector('.products-collection__description'),\r\n    prices = document.querySelector('.products-collection__prices'),\r\n    content = document.querySelector('.products-collection__content')"],"file":"products-collection.js"}
