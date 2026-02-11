@@ -101,4 +101,10 @@
     flex-wrap: nowrap;
   }
 }
+
+@media all and (max-width: 600px) {
+  .reviews__item .reviews__img {
+    padding: var(--v-reviews-content-padding-ltr) var(--v-reviews-content-padding-ltr) 0;
+  }
+}
 /*# sourceMappingURL=reviews.css.map */

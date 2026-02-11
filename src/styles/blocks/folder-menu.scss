@@ -141,7 +141,7 @@
 						> li {
 							padding: 0;
 
-							> a {
+							> a, .menu-title {
 								display: inline-block;
 								font-family: var(--font-family);
 								font-weight: 400;
@@ -152,9 +152,9 @@
 								text-decoration: none;
 								transition: all .3s;
 
-								&:hover {
-									color: var(--yellow);
-								}
+								// &:hover {
+								// 	color: var(--yellow);
+								// }
 							}
 
 							> ul {

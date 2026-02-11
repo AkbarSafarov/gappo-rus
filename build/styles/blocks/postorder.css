@@ -240,4 +240,16 @@
     height: 70px;
   }
 }
+
+@media (max-width: 600px) {
+  .postorder .postorder__contacts-row {
+    display: block;
+  }
+
+  .postorder .postorder__contacts-row .col-6 {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
 /*# sourceMappingURL=postorder.css.map */

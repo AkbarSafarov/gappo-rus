@@ -1,6 +1,11 @@
 @import "../vendor/mixins";
 @import "../vendor/libs";
 
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 991px;
+$breakpoint-md: 600px;
+$breakpoint-sm: 575px;
+
 .postorder {
     --v-postorder-content-gap: 2rem;
 
@@ -35,6 +40,8 @@
         &:last-child {
             --v-postorder-item-padding-bottom: 2rem;
         }
+        
+
     }
 
     &__info {
@@ -49,6 +56,18 @@
     &__contacts {
         display: flex;
         gap: 30px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        .postorder__contacts-row {
+            display: block;
+
+            .col-6 {
+                width: 100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
     }
 }
 

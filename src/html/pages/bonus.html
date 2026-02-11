@@ -1,33 +1,28 @@
 <div class="container-xl">
-    <div class="breadcrumb">
-        <ul class="breadcrumb__list">
-            <li class="breadcrumb__item">
-                <a href="/" class="breadcrumb__link">
-                    <span class="breadcrumb__text">Главная</span>
-                </a>
-            </li>
-            <li class="breadcrumb__item">
-                <i class="breadcrumb__icon icon--chevron-right"></i>
-                <a href="/" class="breadcrumb__link">
-                    <span class="breadcrumb__text">Спасибо за отзыв!</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    
-        <div class="row align-items-end">
-            <div class="col-9">
-                <h1 class="m-0">
-                    Спасибо за отзыв
-                </h1>
-            </div>
-            <div class="col-3">
-                <div class="more text-end">
-                    <a href="#" class="text-uppercase more__link">Продолжить покупки
-                    </a>
-                </div>
-            </div>
-        </div>
+	<nav class="breadcrumb" aria-label="Навигация">
+		<ul class="breadcrumb__list">
+			<li class="breadcrumb__item">
+				<a href="/" class="breadcrumb__link">
+					<span class="breadcrumb__text">Главная</span>
+				</a>
+			</li>
+			<li class="breadcrumb__item">
+				<i class="breadcrumb__icon icon--chevron-right" aria-hidden="true"></i>
+				<span class="breadcrumb__text">Спасибо за отзыв!</span>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="row align-items-end mb-5">
+		<div class="col-lg-9 col-12">
+			<h1 class="m-0">Спасибо за отзыв!</h1>
+		</div>
+		<div class="col-lg-3 col-12">
+			<div class="more text-lg-end">
+				<a href="/catalog" class="text-uppercase more__link">Продолжить покупки</a>
+			</div>
+		</div>
+	</div>
 </div>
 
 <section class="section">
@@ -35,152 +30,168 @@
 		<div class="bonuses">
 			<div class="bonuses__container">
 
-				<div class="rounded-1 bonuses__item bonus small">
-					<div class="row">
-						<div class="col-3">
+				<!-- Блок 1 – Яндекс.Маркет -->
+				<div class="bonuses__item bonus bonus--small rounded-1">
+					<div class="row g-0">
+						<div class="col-lg-3 col-12">
 							<div class="bonus__group">
 								<div class="text-uppercase bonus__title fs-4 lh-sm">
-									Начисляем <span style="color: var(--v-orange);">200 ₽</span> на бонусный счёт!
+									Начисляем <span class="bonus__amount--orange">200 ₽</span> на бонусный счёт!
 								</div>
-								<div class="bonus__btn">
-									<a href="#" class="btn btn-primary text-uppercase bonus__link">Оставить отзыв</a>
+								<div class="bonus__btn mt-3">
+									<a href="https://market.yandex.ru/"
+									   target="_blank"
+									   rel="noopener noreferrer"
+									   class="btn btn-primary text-uppercase bonus__link">
+										Оставить отзыв
+									</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-lg-6 col-12">
 							<div class="bonus__description">
 								<div class="bonus__description-info">
 									<div class="bonus__description-title fs-6 fw-medium">
 										Оставьте отзыв на заказ на Яндекс.Маркет
 									</div>
-									<div class="bonus__description-text">
-										Нажмите «Оставить отзыв», после отправки отзыва, нажмите<br> «Я оставил отзыв на
-										Яндекс.Маркет,
-										проверьте наличие». Начисление бонусов произойдет в течение дня после появления
-										отзыва на
-										Яндекс.Маркет.
+									<div class="bonus__description-text text-gray-400">
+										Нажмите «Оставить отзыв», после отправки отзыва нажмите
+										«Я оставил отзыв на Яндекс.Маркет, проверьте наличие».
+										Бонусы начислят в течение дня после появления отзыва.
 									</div>
 								</div>
-								<div class="text-secondary bonus__description-request">
-									Используйте, пожалуйста, номер заказа <span class="text-white">825262</span> в форме
-									отзыва
+								<div class="bonus__description-request text-secondary mt-3">
+									Используйте, пожалуйста, номер заказа
+									<span class="text-white fw-medium">825262</span> в форме отзыва
 								</div>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-12">
 							<div class="bonus__group bonus__group--border">
 								<div>
 									<div class="bonus__title fs-4 mb-3">
 										Я оставил отзыв на Яндекс.Маркет
 									</div>
-									<div class="text-secondary bonus__text">
-										Все отзывы модерируются 1-5 дней
+									<div class="text-secondary bonus__text small">
+										Все отзывы модерируются 1–5 дней
 									</div>
 								</div>
-								<div class="bonus__btn">
-									<a href="#" class="btn btn-outline-primary text-uppercase bonus__link">Проверить
-										наличие</a>
+								<div class="bonus__btn mt-3">
+									<button type="button" class="btn btn-outline-primary text-uppercase bonus__link">
+										Проверить наличие
+									</button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="rounded-1 bonuses__item bonus small">
-					<div class="row">
-						<div class="col-3">
+				<!-- Блок 2 – Facebook -->
+				<div class="bonuses__item bonus bonus--small rounded-1">
+					<div class="row g-0">
+						<div class="col-lg-3 col-12">
 							<div class="bonus__group">
 								<div class="text-uppercase bonus__title fs-4 lh-sm">
-									Начисляем <span style="color: var(--v-lemon);">150 ₽</span> на бонусный счёт!
+									Начисляем <span class="bonus__amount--lemon">150 ₽</span> на бонусный счёт!
 								</div>
-								<div class="bonus__btn">
-									<a href="#" class="btn btn-primary text-uppercase bonus__link">Оставить отзыв</a>
+								<div class="bonus__btn mt-3">
+									<a href="https://www.facebook.com/"
+									   target="_blank"
+									   rel="noopener noreferrer"
+									   class="btn btn-primary text-uppercase bonus__link">
+										Оставить отзыв
+									</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-lg-6 col-12">
 							<div class="bonus__description">
 								<div class="bonus__description-info">
 									<div class="bonus__description-title fs-6 fw-medium">
 										Напишите пост с отзывом о заказе на Фейсбуке
 									</div>
-									<div class="bonus__description-text">
-										Нажмите «Оставить отзыв», после отправки отзыва, нажмите<br> «Я оставил отзыв на
-										Яндекс.Маркет,
-										проверьте наличие». Начисление бонусов произойдет в течение дня после появления
-										отзыва на
-										Яндекс.Маркет.
+									<div class="bonus__description-text text-gray-400">
+										Нажмите «Оставить отзыв», после публикации поста нажмите
+										«Я оставил отзыв на Facebook, проверьте наличие».
+										Бонусы начислят в течение дня после проверки.
 									</div>
 								</div>
-								<div class="text-secondary bonus__description-request">
-									Используйте, пожалуйста, номер заказа <span class="text-white">825262</span> в форме
-									отзыва
+								<div class="bonus__description-request text-secondary mt-3">
+									Используйте, пожалуйста, номер заказа
+									<span class="text-white fw-medium">825262</span> в посте
 								</div>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-12">
 							<div class="bonus__group bonus__group--border">
 								<div>
 									<div class="bonus__title fs-4 mb-3">
 										Я оставил отзыв на facebook.com
 									</div>
-									<div class="text-secondary bonus__text">
-										Все отзывы модерируются 1-5 дней
+									<div class="text-secondary bonus__text small">
+										Все отзывы модерируются 1–5 дней
 									</div>
 								</div>
-								<div class="bonus__btn">
-									<a href="#" class="btn btn-outline-primary text-uppercase bonus__link">Проверить
-										наличие</a>
+								<div class="bonus__btn mt-3">
+									<button type="button" class="btn btn-outline-primary text-uppercase bonus__link">
+										Проверить наличие
+									</button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="rounded-1 bonuses__item bonus small">
-					<div class="row">
-						<div class="col-3">
+
+				<!-- Блок 3 – Instagram -->
+				<div class="bonuses__item bonus bonus--small rounded-1">
+					<div class="row g-0">
+						<div class="col-lg-3 col-12">
 							<div class="bonus__group">
 								<div class="text-uppercase bonus__title fs-4 lh-sm">
-									Начисляем <span style="color: var(--v-lime);">300 ₽</span> на бонусный счёт!
+									Начисляем <span class="bonus__amount--lime">300 ₽</span> на бонусный счёт!
 								</div>
-								<div class="bonus__btn">
-									<a href="#" class="btn btn-primary text-uppercase bonus__link">Оставить отзыв</a>
+								<div class="bonus__btn mt-3">
+									<a href="https://www.instagram.com/"
+									   target="_blank"
+									   rel="noopener noreferrer"
+									   class="btn btn-primary text-uppercase bonus__link">
+										Сделать отчёт
+									</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-lg-6 col-12">
 							<div class="bonus__description">
 								<div class="bonus__description-info">
 									<div class="bonus__description-title fs-6 fw-medium">
-										Сделайте отчет о заказе в Инстаграм
+										Сделайте отчёт о заказе в Инстаграм
 									</div>
-									<div class="bonus__description-text">
-										Нажмите «Оставить отзыв», после отправки отзыва, нажмите<br> «Я оставил отзыв на
-										Яндекс.Маркет,
-										проверьте наличие». Начисление бонусов произойдет в течение дня после появления
-										отзыва на
-										Яндекс.Маркет.
+									<div class="bonus__description-text text-gray-400">
+										Нажмите «Сделать отчёт», после публикации поста/сторис нажмите
+										«Я оставил отзыв в Instagram, проверьте наличие».
+										Бонусы начислят в течение дня после проверки.
 									</div>
 								</div>
-								<div class="text-secondary bonus__description-request">
-									Используйте, пожалуйста, номер заказа <span class="text-white">825262</span> в форме
-									отзыва
+								<div class="bonus__description-request text-secondary mt-3">
+									Используйте, пожалуйста, номер заказа
+									<span class="text-white fw-medium">825262</span> в публикации
 								</div>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-12">
 							<div class="bonus__group bonus__group--border">
 								<div>
 									<div class="bonus__title fs-4 mb-3">
 										Я оставил отзыв на instagram.com
 									</div>
-									<div class="text-secondary bonus__text">
-										Все отзывы модерируются 1-5 дней
+									<div class="text-secondary bonus__text small">
+										Все отзывы модерируются 1–5 дней
 									</div>
 								</div>
-								<div class="bonus__btn">
-									<a href="#" class="btn btn-outline-primary text-uppercase bonus__link">Проверить
-										наличие</a>
+								<div class="bonus__btn mt-3">
+									<button type="button" class="btn btn-outline-primary text-uppercase bonus__link">
+										Проверить наличие
+									</button>
 								</div>
 							</div>
 						</div>
@@ -196,59 +207,68 @@
 	<div class="container-xl">
 		<div class="h-positive">
 			<div class="g-4 row h-positive__row">
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-3 col-sm-6 col-12">
 					<div class="h-positive__item rounded-1">
 						<div class="h-positive__item-icon mb-4">
-							<img src="/img/positive/market.svg" alt="">
+							<img src="/img/positive/market.svg"
+								 alt="Фирменный магазин"
+								 width="60"
+								 height="60"
+								 loading="lazy">
 						</div>
-						<div class="display-6 h-positive__item-title text-uppercase fw-normal lh-sm">фирменный магазин
+						<div class="display-6 h-positive__item-title text-uppercase fw-normal lh-sm">
+							фирменный магазин
 						</div>
-						<p class="small text-secondary lh-sm">Посетите шоурум и фирменный магазин Gappo,
-							чтобы
-							увидеть все товары
-							вживую</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="h-positive__item rounded-1">
-						<div class="h-positive__item-icon mb-4">
-							<!-- <img src="/img/positive/dollar.svg" alt=""> -->
-							<i class="text-warning icon--free-delivery">
-
-							</i>
-						</div>
-						<div class="display-6 h-positive__item-title text-uppercase fw-normal lh-sm">гарантия лучшей
-							цены</div>
-						<p class="small text-secondary lh-sm">Мы гарантируем лучшие цены на продукцию
-							Gappo.
-							Снизим цену, если
-							найдете
-							дешевле!</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="h-positive__item rounded-1">
-						<div class="h-positive__item-icon mb-4">
-							<img src="/img/positive/track.svg" alt="">
-						</div>
-						<div class="display-6 h-positive__item-title text-uppercase fw-normal lh-sm">бесплатная доставка
-						</div>
-						<p class="small text-secondary lh-sm">При покупке на сумму более 5000 рублей мы
-							осуществим бесплатную
-							доставку
+						<p class="small text-secondary lh-sm mb-0">
+							Посетите шоурум и фирменный магазин Gappo, чтобы увидеть все товары вживую
 						</p>
 					</div>
 				</div>
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-3 col-sm-6 col-12">
 					<div class="h-positive__item rounded-1">
 						<div class="h-positive__item-icon mb-4">
-							<img src="/img/positive/medal.svg" alt="">
+							<i class="text-warning icon--free-delivery" aria-hidden="true"></i>
 						</div>
-						<div class="display-6 h-positive__item-title text-uppercase fw-normal lh-sm">расширенная
-							гарантия</div>
-						<p class="small text-secondary lh-sm">Только у нас — фирменная гарантия от
-							производителя на весь ассортимент
-							товаров</p>
+						<div class="display-6 h-positive__item-title text-uppercase fw-normal lh-sm">
+							гарантия лучшей цены
+						</div>
+						<p class="small text-secondary lh-sm mb-0">
+							Мы гарантируем лучшие цены на продукцию Gappo. Снизим цену, если найдете дешевле!
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6 col-12">
+					<div class="h-positive__item rounded-1">
+						<div class="h-positive__item-icon mb-4">
+							<img src="/img/positive/track.svg"
+								 alt="Бесплатная доставка"
+								 width="60"
+								 height="60"
+								 loading="lazy">
+						</div>
+						<div class="display-6 h-positive__item-title text-uppercase fw-normal lh-sm">
+							бесплатная доставка
+						</div>
+						<p class="small text-secondary lh-sm mb-0">
+							При покупке на сумму более 5000 рублей мы осуществим бесплатную доставку
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6 col-12">
+					<div class="h-positive__item rounded-1">
+						<div class="h-positive__item-icon mb-4">
+							<img src="/img/positive/medal.svg"
+								 alt="Расширенная гарантия"
+								 width="60"
+								 height="60"
+								 loading="lazy">
+						</div>
+						<div class="display-6 h-positive__item-title text-uppercase fw-normal lh-sm">
+							расширенная гарантия
+						</div>
+						<p class="small text-secondary lh-sm mb-0">
+							Только у нас — фирменная гарантия от производителя на весь ассортимент товаров
+						</p>
 					</div>
 				</div>
 			</div>

@@ -1,5 +1,10 @@
 @import "../vendor/libs";
 
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 991px;
+$breakpoint-md: 600px;
+$breakpoint-sm: 575px;
+
 .reviews {
     --v-reviews-container-gap: 2rem;
     --v-reviews-content-padding-ltr: 1.3333rem;
@@ -28,6 +33,12 @@
         flex-wrap: wrap;
         @include sm-block() {
             flex-wrap: nowrap;
+        }
+
+        @media all and (max-width: $breakpoint-md) {
+            .reviews__img {
+                padding: var(--v-reviews-content-padding-ltr) var(--v-reviews-content-padding-ltr) 0;
+            }
         }
     }
 

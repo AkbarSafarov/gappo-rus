@@ -159,7 +159,8 @@
   padding: 0;
 }
 
-.folder-menu-nav .folder__menu_header_inner .folder__menu_header > li .lavel_wrap > ul > li > a {
+.folder-menu-nav .folder__menu_header_inner .folder__menu_header > li .lavel_wrap > ul > li > a,
+.folder-menu-nav .folder__menu_header_inner .folder__menu_header > li .lavel_wrap > ul > li .menu-title {
   display: inline-block;
   font-family: var(--font-family);
   font-weight: 400;
@@ -170,10 +171,6 @@
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-
-.folder-menu-nav .folder__menu_header_inner .folder__menu_header > li .lavel_wrap > ul > li > a:hover {
-  color: var(--yellow);
 }
 
 .folder-menu-nav .folder__menu_header_inner .folder__menu_header > li .lavel_wrap > ul > li > ul {
