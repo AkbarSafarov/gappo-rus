@@ -439,6 +439,113 @@
   display: none;
 }
 
+.registration-form {
+  background: var(--black-10-1a1a1a);
+  padding: 2rem;
+}
+
+.registration-form .order__item {
+  padding: 0;
+}
+
+.registration-form .order__item .order__item-labels-payment {
+  padding: 0;
+}
+
+.registration-form .order__item .order__item-labels-payment .order__item-label .order__item-radio.payment span {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.registration-form .order__item .order__item-labels-payment .order__item-label .order__item-radio.payment .order__item-radio-descr {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 131%;
+  color: var(--gray-50-808080);
+}
+
+.registration-form .form-control {
+  padding: 0.6rem 1.75rem;
+  background: none;
+}
+
+.registration-form textarea.form-control {
+  min-height: calc(1em + 7.6rem + var(--v-border-width) * 2);
+}
+
+.registration-form .form-select {
+  background-color: transparent;
+  --v-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23E6AC00' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.registration-form label[for=captch] {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.registration-form .btn.btn-primary {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #E5AC00;
+}
+
+.registration-form .btn.btn-primary:hover {
+  background: var(--v-btn-hover-bg);
+}
+
+.registration-form .last-field .d-flex {
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.registration-form .text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--gray-50-808080);
+}
+
+.registration-form .captcha-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.registration-form .captcha-field .captcha-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.registration-form .captcha-field .captcha-container .captcha-image {
+  background: var(--gray-15-262626);
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.registration-form .captcha-field .captcha-container .form-control {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 calc(100% - 100px);
+  flex: 0 0 calc(100% - 100px);
+}
+
 @media (max-width: 991px) {
   .account {
     --v-account-content-gap: 2rem;
@@ -497,6 +604,20 @@
 
   .sidebar {
     margin-bottom: 2rem;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .registration-form .captcha-field {
+    display: block;
+  }
+
+  .registration-form .captcha-field .captcha-container {
+    margin-bottom: 1.6rem;
+  }
+
+  .registration-form .captcha-field .btn.btn-primary {
+    width: 100%;
   }
 }
 
