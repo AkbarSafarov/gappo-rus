@@ -112,36 +112,103 @@ document.addEventListener('DOMContentLoaded', function (){
     if (descriptionText) {
         descriptionText.classList.add('collapsed');
     }
-    
-    const toggleButton = document.querySelector('.product-description .product-description__more .more__link');
-    
-    if (toggleButton) {
-        toggleButton.addEventListener('click', function(e) {
-            console.log(123)
-            e.preventDefault();
-            
-            const textBlock = this.closest('.product-description__wrap').querySelector('.product-description__text');
-            
-            const isCollapsed = textBlock.classList.contains('collapsed');
-            
-            if (isCollapsed) {
-                textBlock.classList.remove('collapsed');
-                textBlock.classList.add('expanded');
-                this.textContent = 'Свернуть';
-                this.classList.add('expanded');
-            } else {
-                textBlock.classList.remove('expanded');
-                textBlock.classList.add('collapsed');
-                this.textContent = 'Узнать больше';
-                this.classList.remove('expanded');
-                
-                const productDescription = this.closest('.product-description');
-                if (productDescription) {
-                    productDescription.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    function initProductDescription() {
+        const productDescriptions = document.querySelectorAll('.product-description');
+
+        productDescriptions.forEach(description => {
+            const img = description.querySelector('.product-description__img img');
+            const textBlock = description.querySelector('.product-description__text');
+            const moreWrap = description.querySelector('.product-description__more');
+            const toggleButton = description.querySelector('.more__link');
+
+            function checkHeightAndTruncate() {
+                if (!img || !textBlock || !moreWrap) return;
+
+                const imgHeight = img.offsetHeight;
+                const wasExpanded = textBlock.classList.contains('expanded');
+
+                textBlock.classList.remove('collapsed', 'expanded');
+                textBlock.style.maxHeight = 'none';
+
+                // Получаем реальную высоту текста
+                const textHeight = textBlock.scrollHeight;
+
+                let collapsedHeight;
+                if (imgHeight < 300) {
+                    collapsedHeight = 80;
+                } else if (imgHeight < 400) {
+                    collapsedHeight = 120;
+                } else {
+                    collapsedHeight = 160;
                 }
+
+                textBlock.style.setProperty('--collapsed-height', `${collapsedHeight}px`);
+
+                if (textHeight > collapsedHeight) {
+                    textBlock.classList.add('collapsed');
+                    moreWrap.style.display = 'block';
+
+                    if (wasExpanded) {
+                        textBlock.classList.remove('collapsed');
+                        textBlock.classList.add('expanded');
+                    }
+                } else {
+                    textBlock.classList.remove('collapsed', 'expanded');
+                    moreWrap.style.display = 'none';
+                }
+
+                textBlock.style.maxHeight = '';
             }
+
+            if (img.complete) {
+                checkHeightAndTruncate();
+            } else {
+                img.addEventListener('load', checkHeightAndTruncate);
+            }
+
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const isCollapsed = textBlock.classList.contains('collapsed');
+
+                    if (isCollapsed) {
+                        textBlock.classList.remove('collapsed');
+                        textBlock.classList.add('expanded');
+                        description.classList.add('opened');
+                        this.textContent = 'Свернуть';
+                    } else {
+                        textBlock.classList.remove('expanded');
+                        textBlock.classList.add('collapsed');
+                        this.textContent = 'Узнать больше';
+                        description.classList.remove('opened');
+
+                        description.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest'
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener('resize', debounce(checkHeightAndTruncate, 250));
         });
     }
+
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    initProductDescription()
 
     const orderLabel = document.querySelectorAll('.jsOrderLabelHead');
 
