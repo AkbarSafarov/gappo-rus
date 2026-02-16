@@ -157,24 +157,8 @@
   gap: var(--v-status-gap);
 }
 
-.status--processing i {
-  color: var(--v-orange);
-}
-
-.status--shipped i {
-  color: var(--v-yellow);
-}
-
-.status--cancelled i {
-  color: var(--v-danger);
-}
-
-.status--delivered i {
-  color: var(--v-lime);
-}
-
-.status--completed i {
-  color: var(--v-secondary);
+.status i {
+  color: var(--v-status-color, transparent);
 }
 
 .profile-data {

@@ -249,35 +249,11 @@ $breakpoint-sm: 575px;
     align-items: center;
     gap: var(--v-status-gap);
 
-    &--processing {
-        & i {
-            color: var(--v-orange);
-        }
+    i {
+        color: var(--v-status-color, transparent);
     }
 
-    &--shipped {
-        & i {
-            color: var(--v-yellow);
-        }
-    }
 
-    &--cancelled {
-        & i {
-            color: var(--v-danger);
-        }
-    }
-
-    &--delivered {
-        & i {
-            color: var(--v-lime);
-        }
-    }
-
-    &--completed {
-        & i {
-            color: var(--v-secondary);
-        }
-    }
 }
 
 // ========================================
