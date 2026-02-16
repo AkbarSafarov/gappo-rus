@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["h-slider.js"],"sourcesContent":["let hSLider = new Swiper('.h-slider__content', {\n    grabCursor: 'true',\n    // loop: false,\n\n    pagination: {\n        el: '.swiper-pagination',\n        clickable: true,\n    },\n})"],"file":"h-slider.js"}

@@ -17,9 +17,6 @@
         gap: var(--v-product-description-wrap-gap);
         padding: var(--v-product-description-wrap-padding-top) var(--v-product-description-wrap-padding-x)
             var(--v-product-description-wrap-padding-bottom) var(--v-product-description-wrap-padding-x);
-        @include md-block() {
-            padding-left: 0;
-        }
     }
 
     &__text {
@@ -122,6 +119,4 @@
         }
     }
 }
-
-
 
