@@ -836,6 +836,7 @@
 .form-switch .form-check-input:checked {
   border: 1px solid var(--gray-90-e5e5e5);
   --v-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23C7D900'/%3e%3c/svg%3e");
+  background-color: transparent;
 }
 
 .form-switch .form-check-input:focus {

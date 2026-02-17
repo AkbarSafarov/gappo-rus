@@ -228,6 +228,46 @@ document.addEventListener('DOMContentLoaded', function (){
             });
         });
     }
+
+    const quantityBlocks = document.querySelectorAll('.quantity');
+
+    if(quantityBlocks.length) {
+        quantityBlocks.forEach(block => {
+            const input = block.querySelector('.quantity__input');
+            const btns = block.querySelectorAll('.quantity__btn');
+
+            if (!input || btns.length !== 2) return;
+
+            const minusBtn = btns[0];
+            const plusBtn = btns[1];
+
+            const updateValue = (delta) => {
+                let current = parseInt(input.value);
+                if (isNaN(current)) current = 1;
+                current += delta;
+                if (current < 1) current = 1;
+                input.value = current;
+            }
+
+            minusBtn.addEventListener('click', () => {
+                updateValue(-1);
+            });
+
+            plusBtn.addEventListener('click', () => {
+                updateValue(1);
+            });
+
+            input.addEventListener('input', () => {
+                let val = parseInt(input.value);
+                if (isNaN(val) || val < 1) {
+                    input.value = 1;
+                } else {
+                    input.value = val;
+                }
+            });
+        });
+    }
+
 });
 
 
